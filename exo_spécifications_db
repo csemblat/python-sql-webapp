@@ -1,0 +1,22 @@
+Question 1:
+
+adresse: 
+
+numéro: primary key unique int autoincrement
+rue: varchar
+
+parcelle :
+
+parcelle_id: primary key unique int autoincrement
+adresse_id: int
+ville: varchar
+code postal: int
+surface: float
+
+projet
+
+project_id: primary key unique int autoincrement
+parcelle_id: int unique foreign key
+ca: float
+creation_date: datetime
+status: varchar

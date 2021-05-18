@@ -1,0 +1,13 @@
+Question 2:
+
+SELECT a.numero, a.rue, c.surface, p.creation_date, p.ca FROM adresse a, parcelle c, projet p WHERE a.adresse_id = c.adresse_id AND c.ville = 'Montreuil' AND p.parcelle_id = c.parcelle_id;
+
+Question 2 bonus:
+
+SELECT c.ville, p.status, SUM(p.ca) FROM projet p, parcelle c GROUP BY c.ville, p.status;
+
+Total et Total par ville:
+
+SELECT SUM(p.ca) FROM projet p;
+
+SELECT c.ville, SUM(p.ca) FROM projet p, parcelle c WHERE p.parcelle_id = c.parcelle_id GROUP BY c.ville;
